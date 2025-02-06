@@ -33,7 +33,7 @@ To perform exploratory data analysis (EDA) and develop models to identify the mo
 |**income**        |Binary target variable representing whether the individual's income is greater than or less than $50,000 per year. |
 
 ### Methodology
-* **Data Collection:** Data was sourced from internal sales records.
+* **Data Collection:** Data was sourced from Kaggle.
 * **Data Preparation:** Missing values were handled, duplicates removed, and data was standardized for analysis.
 * **Tools Used:** Python (Pandas, Matplotlib, Seaborn, NumPy) for data manipulation, visualization, and statistical analysis.
 
