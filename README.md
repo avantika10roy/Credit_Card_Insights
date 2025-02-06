@@ -35,10 +35,13 @@ To perform exploratory data analysis (EDA) and develop models to identify the mo
 ### Methodology
 * **Data Collection:** Data was sourced from Kaggle.
 * **Data Preparation:** Missing values were handled, duplicates removed, and data was standardized for analysis.
-* **Tools Used:** 1. Python 3.12.8
-                  2. Pandas 2.2.3 for data manipulation
-                  3. Matplotlib 3.10.0 and Seaborn 0.13.2 for data visualization
-                  4. NumPy 2.2.2 for data statistical analysis.
+* **Tools Used:** 
+|Sl| Tools                                                       |
+|--|-------------------------------------------------------------|
+|1.| Python 3.12.8                                               |
+|2.| Pandas 2.2.3 for data manipulation                          |
+|3.| Matplotlib 3.10.0 and Seaborn 0.13.2 for data visualization |
+|4.| NumPy 2.2.2 for data statistical analysis.                  |
 
 ### Exploratory Data Analysis
 
