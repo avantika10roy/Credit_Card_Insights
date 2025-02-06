@@ -10,7 +10,7 @@ To perform exploratory data analysis (EDA) and develop models to identify the mo
 ### Dataset
 ##### **Dataset Overview:**
 * The dataset contains 32,561 rows and 15 columns.
-* The target variable is income, which has two categories: <=50K and >50K.
+* The target variable is income, which has binary categories.
 * The dataset reflects a diverse population with varying ages, education levels, financial outcomes, and work hours, indicating a mix of individuals with diverse backgrounds and circumstances.
 
 ##### Variables in the Dataset:
@@ -35,10 +35,20 @@ To perform exploratory data analysis (EDA) and develop models to identify the mo
 ### Methodology
 * **Data Collection:** Data was sourced from Kaggle.
 * **Data Preparation:** Missing values were handled, duplicates removed, and data was standardized for analysis.
-* **Tools Used:** Python (Pandas, Matplotlib, Seaborn, NumPy) for data manipulation, visualization, and statistical analysis.
+* **Tools Used:** 1. Python 3.12.8
+                  2. Pandas 2.2.3 for data manipulation
+                  3. Matplotlib 3.10.0 and Seaborn 0.13.2 for data visualization
+                  4. NumPy 2.2.2 for data statistical analysis.
 
 ### Exploratory Data Analysis
-###### Skewness and Kurtosis
+
+#### Univariate Analysis
+On performing **Univariate Analysis**, the following insights were drawn:
+
+* The dataset is imbalanced, with significantly more individuals earning less than 50k compared to those earning more than 50k.
+![image](https://github.com/user-attachments/assets/67def782-befb-4f0b-b368-c883ff88265c)
+
+##### Skewness and Kurtosis
 |                 | Skewness | Kurtosis |
 |-----------------|----------|----------|
 |  Age            | 0.49     | -0.45    |
@@ -48,17 +58,12 @@ To perform exploratory data analysis (EDA) and develop models to identify the mo
 | Capital Loss    | 29.66    | 931.56   |
 | Hours per Week  | -0.35    | 1.44     |
 
-###### Insights on Skewness
+##### Insights on Skewness
 The right-skewed distributions for age, weight, capital gain, and capital loss suggest a few individuals with very high values, while education years show a balanced distribution, and the slight left skew in work hours indicates most individuals are employed full-time.
 
-###### Insights on Kurtosis
-The data shows light-tailed distributions for age, weight, and education, indicating consistency, while capital gain and loss have heavy tails, suggesting a few individuals experience extreme financial outcomes.
+##### Insights on Kurtosis
+The data shows light-tailed distributions for age, weight, and education, indicating consistency, while capital gain and loss have heavy tails, suggesting a few individuals experience extreme financial outcomes. 
 
-### Univariate Analysis
-On performing **Univariate Analysis**, the following insights were drawn:
-
-* The dataset is imbalanced, with significantly more individuals earning less than 50k compared to those earning more than 50k.
-![image](https://github.com/user-attachments/assets/67def782-befb-4f0b-b368-c883ff88265c)
 
 * Younger individuals are more likely to earn, with a higher concentration of people in the 20-50 age range. 
 
@@ -137,7 +142,7 @@ On performing **Bivariate Analysis**, the following insights were drawn:
 | F1-Score  |    0.3376           | 0.3564 |    0.5695     |     0.5477   |
 | RUC AOC   |    0.7324           | 0.6443 |    0.7250     |     0.7682   |
 
-* Performing SMOTE has reduced the performance of the models significantly, so model is trained on unbalanced data.
+* Performing SMOTE has reduced the performance of the models significantly, so model is trained on imbalanced data.
 
 ### Feature Importance
 ![image](https://github.com/user-attachments/assets/9fce7fed-c67a-4ee8-96dc-25a520ca161e)
@@ -176,6 +181,6 @@ Decision Tree Model was selected as it has the highest performance score among o
 ### Final Conclusions
 
 * Predicted Income closely matches the Actual Income for the given test samples, with the majority of predictions being correct.
-* The accuracy score on the test set is 0.8446, indicating that the model correctly classifies about 84.5% of the test data. This suggests a reasonably good fit, especially for an initial model, and reflects strong predictive power.
-* The decision tree classifier performed well in predicting income categories (<=50K and >50K), achieving relatively high accuracy.
+* The accuracy score on the test set is **0.8446**, indicating that the model correctly classifies about **84.5%** of the test data. This suggests a reasonably good fit, especially for an initial model, and reflects strong predictive power.
+* The decision tree classifier performed well in predicting income categories (**<=50K and >50K**), achieving relatively high accuracy.
 * Decision trees are known for handling both categorical and numerical data well, making them suitable for this dataset, which has a mix of feature types (e.g., age, education, workclass).
