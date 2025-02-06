@@ -35,7 +35,8 @@ To perform exploratory data analysis (EDA) and develop models to identify the mo
 ### Methodology
 * **Data Collection:** Data was sourced from Kaggle.
 * **Data Preparation:** Missing values were handled, duplicates removed, and data was standardized for analysis.
-* **Tools Used:** 
+#### Tools Used:
+
 | Sl |                        Tools                                |
 |----|-------------------------------------------------------------|
 |1.  | Python 3.12.8                                               |
