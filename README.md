@@ -110,7 +110,7 @@ On performing **Bivariate Analysis**, the following insights were drawn:
 
 ### Multivariate Analysis
 
-* The correlation matrix reveals key relationships, such as the positive correlation between education and years of schooling, and the strong negative correlation between relationship type and sex, indicating gender-based differences in relationship dynamics. Further investigation into how age, sex, and marital status interact could provide valuable insights into demographic trends and their potential impact on income.
+* The correlation matrix reveals key relationships, such as the positive correlation between education and years of schooling, and the strong negative correlation between relationship type and sex.
 
 * The pairplot highlights that older individuals (40-60) are more likely to earn above 50K, while younger individuals tend to earn less. Higher education levels, longer work hours (over 40 hours), and significant capital gains/losses are all associated with higher income. However, there is no clear relationship between final weight (fnlwgt) and income.
 
