@@ -1,6 +1,6 @@
 # Data_Analysis
 ### Problem Statement
-This case study provides comprehensive exploratory data analysis on customer churn prediction. In this dataset, we have a demographic and employment data of individuals, including details such as age, education, occuoation and marital status, among other features. 
+This case study provides comprehensive exploratory data analysis on **Credit Card Insights** prediction. In this dataset, we have a demographic and employment data of individuals, including details such as age, education, occuoation and marital status, among other features. 
 
 This analysis explores key trends, factors influencing individual income level, socio-economic patterns and influences of various personal and work-related factors.
 
