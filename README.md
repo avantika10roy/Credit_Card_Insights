@@ -84,9 +84,6 @@ On performing **Bivariate Analysis**, the following insights were drawn:
 * The dataset shows that government and self-employed workers, those with higher education, executive roles, married individuals, and certain racial or national groups tend to earn more than 50K, while males generally earn more than females, and income disparities are observed based on occupation and marital status.
 
 ###### ANOVA Test
-|--------------------------------------|
-|               ANOVA Test             |
-|---------------|------------|---------|
 |Income vs      | Statistics | P-Value |
 |---------------|------------|---------|
 | Age           |  1813.08   |  0.00   |
@@ -99,9 +96,6 @@ On performing **Bivariate Analysis**, the following insights were drawn:
 * The analysis highlights that age, education, capital gains, capital losses, and hours worked per week are significant predictors of income, while final weight does not significantly influence income levels. This suggests targeted interventions in education and financial strategies could help address income disparities.
 
 ###### Chi-Square Test
-|--------------------------------------|
-|             Chi-Square Test          |
-|---------------|------------|---------|
 |Income vs      | Statistics | P-Value |
 |---------------|------------|---------|
 | Work Class    |   874      |  0.00   |
@@ -122,7 +116,6 @@ On performing **Bivariate Analysis**, the following insights were drawn:
 * The pairplot highlights that older individuals (40-60) are more likely to earn above 50K, while younger individuals tend to earn less. Higher education levels, longer work hours (over 40 hours), and significant capital gains/losses are all associated with higher income. However, there is no clear relationship between final weight (fnlwgt) and income.
 
 ### Model Training on Imbalanced Data
-|-----------|---------------------|--------|---------------|--------------|
 |           | Logistic Regression |  KNN   | Decision Tree | Bernoulli NB |
 |-----------|---------------------|--------|---------------|--------------|
 | Accuracy  |    0.6790           | 0.7083 |    0.8549     |     0.7519   |
@@ -132,7 +125,6 @@ On performing **Bivariate Analysis**, the following insights were drawn:
 | RUC AOC   |    0.7681           | 0.7836 |    0.8549     |     0.7678   |
 
 ### Model Training on Balanced Data using SMOTE
-|-----------|---------------------|--------|---------------|--------------|
 |           | Logistic Regression |  KNN   | Decision Tree | Bernoulli NB |
 |-----------|---------------------|--------|---------------|--------------|
 | Accuracy  |    0.7969           | 0.7855 |    0.8036     |     0.7325   |
@@ -142,7 +134,6 @@ On performing **Bivariate Analysis**, the following insights were drawn:
 | RUC AOC   |    0.7324           | 0.6443 |    0.7250     |     0.7682   |
 
 ### Feature Importance
-|----------------|---------------|------------|
 | Feature Number |  feature      | importance |
 |----------------|---------------|------------|
 |    7           | relationship  |   0.393504 |
@@ -165,7 +156,6 @@ Decision Tree Model was selected as it has the highest performance score among o
 
 ##### Confusion Matrix
 
-|------------------|----------|----------|
 | Actual/Predicted | Positive | Negative |
 |------------------|----------|----------|
 | Positive         |  4255    |   374    |
