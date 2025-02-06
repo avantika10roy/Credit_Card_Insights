@@ -37,7 +37,6 @@ To perform exploratory data analysis (EDA) and develop models to identify the mo
 
 ### Exploratory Data Analysis
 ###### Skewness and Kurtosis
-|-----------------|----------|----------|
 |                 | Skewness | Kurtosis |
 |-----------------|----------|----------|
 |  Age            | 0.49     | -0.45    |
