@@ -14,21 +14,23 @@ To perform exploratory data analysis (EDA) and develop models to identify the mo
 * The dataset reflects a diverse population with varying ages, education levels, financial outcomes, and work hours, indicating a mix of individuals with diverse backgrounds and circumstances.
 
 ##### Variables in the Dataset:
-* **age:** The age of the individual.
-* **workclass:** Type of employment (e.g., Private, Government, Self-Employed).
-* **fnlwgt:** Final sample weight, representing how many people the individual represents.
-* **education:** The highest level of education attained (e.g., Bachelors, HS-grad).
-* **education-num:** Numerical representation of education level.
-* **marital-status:** The marital status of the individual (e.g., Married, Never-married).
-* **occupation:** The individual’s occupation category (e.g., Exec-managerial, Craft-repair).
-* **relationship:** The relationship status within a family (e.g., Husband, Wife, Not-in-family).
-* **race:** The race of the individual (e.g., White, Black, Asian).
-* **sex:** Gender of the individual (Male, Female).
-* **capital-gain:** Capital gains from investments.
-* **capital-loss:** Losses from investments.
-* **hours-per-week:** The number of hours worked per week.
-* **native-country:** The country of origin for the individual.
-* **income:** Binary target variable representing whether the individual's income is greater than or less than $50,000 per year.
+|    Feature       |  Description                                                                                                      |
+|------------------|-------------------------------------------------------------------------------------------------------------------|
+|   **age**        |  The age of the individual.                                                                                       |
+|**workclass**     | Type of employment (e.g., Private, Government, Self-Employed).                                                    |
+| **fnlwgt**       | Final sample weight, representing how many people the individual represents.                                      |
+|**education**     | The highest level of education attained (e.g., Bachelors, HS-grad).                                               |
+|**education-num** | Numerical representation of education level.                                                                      |
+|**marital-status**| The marital status of the individual (e.g., Married, Never-married).                                              |
+|**occupation**    | The individual’s occupation category (e.g., Exec-managerial, Craft-repair).                                       |
+|**relationship**  | The relationship status within a family (e.g., Husband, Wife, Not-in-family).                                     |
+|**race**          | The race of the individual (e.g., White, Black, Asian).                                                           |
+|**sex**           | Gender of the individual (Male, Female).                                                                          |
+|**capital-gain**  | Capital gains from investments.                                                                                   |
+|**capital-loss**  | Losses from investments.                                                                                          |
+|**hours-per-week**| The number of hours worked per week.                                                                              |
+|**native-country**| The country of origin for the individual.                                                                         |
+|**income**        |Binary target variable representing whether the individual's income is greater than or less than $50,000 per year. |
 
 ### Methodology
 * **Data Collection:** Data was sourced from internal sales records.
@@ -47,25 +49,23 @@ To perform exploratory data analysis (EDA) and develop models to identify the mo
 | Hours per Week  | -0.35    | 1.44     |
 
 ###### Insights on Skewness
-* **Right-Skewed Distributions:** The right-skewed distributions for age, final weight, capital gain, and especially capital loss indicate that while the majority of the population tends to fall within a certain range, there are a few individuals who stand out due to very high values in these categories.
-* **Symmetrical Distribution:** Education years show a more balanced distribution, indicating a more uniform educational attainment among the population.
-* **Work Hours:** The slight left skew in hours per week may suggest a workforce where most individuals are engaged in full-time work, with fewer working part-time or very few hours.
+The right-skewed distributions for age, weight, capital gain, and capital loss suggest a few individuals with very high values, while education years show a balanced distribution, and the slight left skew in work hours indicates most individuals are employed full-time.
 
 ###### Insights on Kurtosis
-* **Light-Tailed Distributions:** The distributions for age, final weight, and education years are relatively flat and do not exhibit extreme values, indicating a more consistent range of data with few outliers.
-* **Heavy-Tailed Distributions:** In contrast, capital gain and especially capital loss exhibit very heavy tails, indicating that while most individuals have minimal gains or losses, a few experience substantial extremes. This could reflect the nature of investments, where a small number of individuals might engage in high-risk financial behaviors leading to large losses or gains.
-* **Implications:** Understanding the kurtosis alongside skewness provides deeper insights into the variability and potential outliers in your data. The heavy-tailed distributions in capital gains and losses might warrant further investigation into the factors contributing to those extremes.
+The data shows light-tailed distributions for age, weight, and education, indicating consistency, while capital gain and loss have heavy tails, suggesting a few individuals experience extreme financial outcomes.
 
 ### Univariate Analysis
 On performing **Univariate Analysis**, the following insights were drawn:
 
 * The dataset is imbalanced, with significantly more individuals earning less than 50k compared to those earning more than 50k.
+![image](https://github.com/user-attachments/assets/67def782-befb-4f0b-b368-c883ff88265c)
 
 * Younger individuals are more likely to earn, with a higher concentration of people in the 20-50 age range. 
 
 * Most individuals have minimal capital gain or loss and work an average of 40 hours per week. 
 
 * A high concentration of earning individuals have 9 years of education.
+![image](https://github.com/user-attachments/assets/4a417a5d-47c1-4161-91da-114af7e0e822)
 
 * The dataset contains several outliers, like individuals with unusually high ages, abnormal education years going as low as 4, extreme capital gains, and abnormally low or high work hours, suggesting potential data quality issues or exceptional cases.
 
@@ -74,13 +74,16 @@ On performing **Univariate Analysis**, the following insights were drawn:
 * There is a trimodal distribution in education (bachelor’s, college, and high school), and a significant number of married or previously married individuals.
 
 * There is also a predominance of white males, primarily from the United States.
+![image](https://github.com/user-attachments/assets/784ab8be-d606-47b9-92d6-17b72d5ec842)
 
 ### Bivariate Analysis
 On performing **Bivariate Analysis**, the following insights were drawn:
 
 * The analysis reveals that middle-aged individuals are more likely to earn above 50K, higher education and capital gains are linked to greater income, and individuals working more than 40 hours per week are more likely to earn over 50K, highlighting the importance of age, education, and work hours in income levels.
+![image](https://github.com/user-attachments/assets/512302f5-90f9-4eea-8406-e46bd9f285bd)
 
 * The dataset shows that government and self-employed workers, those with higher education, executive roles, married individuals, and certain racial or national groups tend to earn more than 50K, while males generally earn more than females, and income disparities are observed based on occupation and marital status.
+![image](https://github.com/user-attachments/assets/8675444a-7d92-4809-9c71-271da81e8768)
 
 ###### ANOVA Test
 |Income vs      | Statistics | P-Value |
@@ -110,9 +113,11 @@ On performing **Bivariate Analysis**, the following insights were drawn:
 
 ### Multivariate Analysis
 
-* The correlation matrix reveals key relationships, such as the positive correlation between education and years of schooling, and the strong negative correlation between relationship type and sex.
+* The **correlation matrix** reveals key relationships, such as the positive correlation between education and years of schooling, and the strong negative correlation between relationship type and sex.
+![image](https://github.com/user-attachments/assets/42546c4e-efc4-46b2-8782-40cfcca10b3f)
 
-* The pairplot highlights that older individuals (40-60) are more likely to earn above 50K, while younger individuals tend to earn less. Higher education levels, longer work hours (over 40 hours), and significant capital gains/losses are all associated with higher income. However, there is no clear relationship between final weight (fnlwgt) and income.
+* The **pairplot** highlights that older individuals (40-60) are more likely to earn above 50K, while younger individuals tend to earn less. Higher education levels, longer work hours (over 40 hours), and significant capital gains/losses are all associated with higher income. However, there is no clear relationship between final weight (fnlwgt) and income.
+![image](https://github.com/user-attachments/assets/029d7e58-659a-4720-8a37-244f36236234)
 
 ### Model Training on Imbalanced Data
 |           | Logistic Regression |  KNN   | Decision Tree | Bernoulli NB |
@@ -132,7 +137,11 @@ On performing **Bivariate Analysis**, the following insights were drawn:
 | F1-Score  |    0.3376           | 0.3564 |    0.5695     |     0.5477   |
 | RUC AOC   |    0.7324           | 0.6443 |    0.7250     |     0.7682   |
 
+* Performing SMOTE has reduced the performance of the models significantly, so model is trained on unbalanced data.
+
 ### Feature Importance
+![image](https://github.com/user-attachments/assets/9fce7fed-c67a-4ee8-96dc-25a520ca161e)
+
 | Feature Number |  feature      | importance |
 |----------------|---------------|------------|
 |    7           | relationship  |   0.393504 |
@@ -154,6 +163,7 @@ On performing **Bivariate Analysis**, the following insights were drawn:
 Decision Tree Model was selected as it has the highest performance score among other models.
 
 ##### Confusion Matrix
+![image](https://github.com/user-attachments/assets/cf1132fb-0c17-4316-91fe-ef57e784eff8)
 
 | Actual/Predicted | Positive | Negative |
 |------------------|----------|----------|
